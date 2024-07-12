@@ -1,26 +1,25 @@
-name: README Links Check
+name: README Links Checker
 
 on:
-  push:
-    branches:
-      - main
-  pull_request:
-    branches:
-      - main
+  repository_dispatch:
   workflow_dispatch:
+  schedule:
+    - cron: "00 18 * * *"
 
 jobs:
-  link-check:
+  linkChecker:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4
+      - uses: actions/checkout@v4
 
-      - name: Install dependencies
-        run: npm install
+      - name: Link Checker
+        id: lychee
+        uses: lycheeverse/lychee-action@v1.9.0
 
-      - name: Run link check
-        uses: lycheeverse/lychee-action@v1
+      - name: Create Issue From File
+        if: env.lychee_exit_code != 0
+        uses: peter-evans/create-issue-from-file@v4
         with:
-          file: README.md
+          title: Link Checker Report
+          content-filepath: ./lychee/out.md
+          labels: report, automated issue
