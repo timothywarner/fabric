@@ -2,7 +2,7 @@
 
 ## Introduction
 
-This live online course was modeled on the M[icrosoft Certified: Fabric Analytics Engineer Associate](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/?practice-assessment-type=certification) certification. That said, its content isn't particularly cert-aligned. Instead, the dual job role (data engineer and data analyst) focus was helpful in aggregating what I wanted to teach. -Tim
+This live online course was modeled on the [Microsoft Certified: Fabric Analytics Engineer Associate](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/?practice-assessment-type=certification) certification. That said, its content isn't particularly cert-aligned. Instead, the dual job role (data engineer and data analyst) focus was helpful in aggregating what I wanted to teach. -Tim
 
 ## Contact information
 
