@@ -27,9 +27,17 @@ This live online course was modeled on the [Microsoft Certified: Fabric Analytic
 - Power BI service documentation
 - Power BI Desktop documentation
 
+## Power Platform
+
+- Power Platform marketing page
+- Power Platform pricing
+- Power Platform documentation
+- Power Apps documentation
+- Power Automate documentation
 
 ## Dev Tools
 
+- [Microsoft Fabric/Power BI service portal](https://app.fabric.microsoft.com/home?experience=power-bi)
 - [.NET client library for Microsoft Power BI](https://www.nuget.org/packages/Microsoft.PowerBI.Api/)
 - OneLake File Explorer for Windows
 - Power BI Desktop
@@ -42,6 +50,7 @@ This live online course was modeled on the [Microsoft Certified: Fabric Analytic
 ## Sample Data
 
 - [Power BI Developer Samples](https://github.com/Microsoft/PowerBI-Developer-Samples)
+- [Microsoft Fabric samples](https://github.com/microsoft/fabric-samples)
 
 
 
