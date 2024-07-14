@@ -7,10 +7,45 @@ This live online course was modeled on the [Microsoft Certified: Fabric Analytic
 ## Contact information
 
 - [Tim Warner](mailto:timothywarner316@gmail.com)
-- [LinkedIn](https://www.linkedin.com/in/timothywarner/)
+- [LinkedIn](https://linkedin.com/in/timothywarner)
 - [Website](https://techtrainertim.com)
 - [Bluesky](https://bsky.app/profile/techtrainertim.bsky.social)
 - [Mastodon](https://mastodon.social/@techtrainertim)
 
+## Microsoft Fabric
+
+- [Microsoft Fabric marketing page](https://www.microsoft.com/en-us/microsoft-fabric)
+- [Microsoft Fabric pricing](https://azure.microsoft.com/en-us/pricing/details/microsoft-fabric/)
+- [Microsoft Fabric documentation](https://learn.microsoft.com/en-us/fabric/)
+- [Fabric Resources](https://community.fabric.microsoft.com/t5/Fabric-Resources/ct-p/fbc_resources)
+- [End-to-end tutorials in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/get-started/end-to-end-tutorials)
+
+## Power BI
+
+- Power BI marketing page
+- Power BI pricing
+- Power BI service documentation
+- Power BI Desktop documentation
 
 
+## Dev Tools
+
+- [.NET client library for Microsoft Power BI](https://www.nuget.org/packages/Microsoft.PowerBI.Api/)
+- OneLake File Explorer for Windows
+- Power BI Desktop
+- Power BI mobile app (iOS, Android)
+-
+
+
+
+
+## Sample Data
+
+- [Power BI Developer Samples](https://github.com/Microsoft/PowerBI-Developer-Samples)
+
+
+
+
+## Microsoft Fabric Certification
+
+-
