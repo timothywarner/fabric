@@ -22,39 +22,33 @@ This live online course was modeled on the [Microsoft Certified: Fabric Analytic
 
 ## Power BI
 
-- Power BI marketing page
-- Power BI pricing
-- Power BI service documentation
-- Power BI Desktop documentation
+- [Power BI marketing page](https://www.microsoft.com/en-us/power-platform/products/power-bi)
+- [Power BI pricing](https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing)
+- [Power BI service documentation](https://learn.microsoft.com/en-us/power-bi/)
+- [Power BI Desktop documentation](https://learn.microsoft.com/en-us/power-bi/)
 
 ## Power Platform
 
-- Power Platform marketing page
-- Power Platform pricing
-- Power Platform documentation
-- Power Apps documentation
-- Power Automate documentation
+- [Power Platform marketing page](https://www.microsoft.com/en-us/power-platform)
+- [Power Platform pricing](https://www.microsoft.com/en-us/power-platform/products/power-apps/pricing)
+- [Power Platform documentation](https://learn.microsoft.com/en-us/power-platform/)
 
 ## Dev Tools
 
 - [Microsoft Fabric/Power BI service portal](https://app.fabric.microsoft.com/home?experience=power-bi)
 - [.NET client library for Microsoft Power BI](https://www.nuget.org/packages/Microsoft.PowerBI.Api/)
-- OneLake File Explorer for Windows
-- Power BI Desktop
-- Power BI mobile app (iOS, Android)
--
-
-
-
+- [OneLake File Explorer for Windows](https://www.microsoft.com/en-us/download/details.aspx?id=105222)
+- [Power BI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop)
+- [Power BI mobile app (iOS, Android)](https://learn.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices)
 
 ## Sample Data
 
 - [Power BI Developer Samples](https://github.com/Microsoft/PowerBI-Developer-Samples)
 - [Microsoft Fabric samples](https://github.com/microsoft/fabric-samples)
 
-
-
-
 ## Microsoft Fabric Certification
 
+- [Microsoft Certified: Fabric Analytics Engineer Associate](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/)
+- [Exam DP-600 Microsoft practice assessment](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/practice/assessment?assessment-type=practice&assessmentId=90&practice-assessment-type=certification)
+- [Microsoft cert offers](https://learn.microsoft.com/en-us/credentials/certifications/deals)
 -
