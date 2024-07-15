@@ -40,6 +40,9 @@ This live online course was modeled on the [Microsoft Certified: Fabric Analytic
 - [OneLake File Explorer for Windows](https://www.microsoft.com/en-us/download/details.aspx?id=105222)
 - [Power BI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop)
 - [Power BI mobile app (iOS, Android)](https://learn.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices)
+- [DAX calc & measures reference](https://learn.microsoft.com/en-us/dax/dax-function-reference)
+- [PowerFX low-code dev reference](https://learn.microsoft.com/en-us/power-platform/power-fx/formula-reference-overview)
+- [Power Query M data transformation reference](https://learn.microsoft.com/en-us/powerquery-m/)
 
 ## Sample Data
 
