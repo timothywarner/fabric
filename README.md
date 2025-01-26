@@ -1,57 +1,94 @@
-# Microsoft Fabric Quick Start (Live Online Training)
+# Microsoft Fabric Jumpstart Training
 
-## Introduction
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![Links Check](https://img.shields.io/github/actions/workflow/status/timothywarner/fabric/README-links-check.yml?label=links)](https://github.com/timothywarner/fabric/actions/workflows/README-links-check.yml)
+[![Microsoft Fabric](https://img.shields.io/badge/Fabric-Documentation-blue)](https://learn.microsoft.com/fabric/)
+[![Website](https://img.shields.io/badge/🌐-TechTrainerTim.com-blue)](https://techtrainertim.com/)
+[![O'Reilly](https://img.shields.io/badge/O'Reilly-Live%20Training-red)](https://learning.oreilly.com/)
 
-This live online course was modeled on the [Microsoft Certified: Fabric Analytics Engineer Associate](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/?practice-assessment-type=certification) certification. That said, its content isn't particularly cert-aligned. Instead, the dual job role (data engineer and data analyst) focus was helpful in aggregating what I wanted to teach. -Tim
+Welcome to the Microsoft Fabric Jumpstart training repository! This hands-on course is designed to get you productive with Microsoft's unified analytics platform quickly and effectively.
 
-## Contact information
+## 🎯 Course Overview
 
-- [Tim Warner](mailto:timothywarner316@gmail.com)
-- [LinkedIn](https://linkedin.com/in/timothywarner)
-- [Website](https://techtrainertim.com)
-- [Bluesky](https://bsky.app/profile/techtrainertim.bsky.social)
-- [Mastodon](https://mastodon.social/@techtrainertim)
+Transform raw data into actionable insights within hours using Microsoft Fabric's comprehensive analytics suite. This course combines architectural principles with hands-on labs to ensure you understand both theory and practical implementation.
 
-## Microsoft Fabric
+## 🔧 Prerequisites
 
-- [Microsoft Fabric marketing page](https://www.microsoft.com/en-us/microsoft-fabric)
-- [Microsoft Fabric pricing](https://azure.microsoft.com/en-us/pricing/details/microsoft-fabric/)
-- [Microsoft Fabric documentation](https://learn.microsoft.com/en-us/fabric/)
-- [Fabric Resources](https://community.fabric.microsoft.com/t5/Fabric-Resources/ct-p/fbc_resources)
-- [End-to-end tutorials in Microsoft Fabric](https://learn.microsoft.com/en-us/fabric/get-started/end-to-end-tutorials)
+- Active Azure subscription ([Create free account](https://azure.microsoft.com/free/))
+- Basic Azure knowledge (resource groups, subscriptions, networking)
+- Data fundamentals understanding
+- Optional: Familiarity with Python, SQL, or similar languages
 
-## Power BI
+## 🛠️ Setup Requirements
 
-- [Power BI marketing page](https://www.microsoft.com/en-us/power-platform/products/power-bi)
-- [Power BI pricing](https://www.microsoft.com/en-us/power-platform/products/power-bi/pricing)
-- [Power BI service documentation](https://learn.microsoft.com/en-us/power-bi/)
-- [Power BI Desktop documentation](https://learn.microsoft.com/en-us/power-bi/)
+1. [Visual Studio Code](https://code.visualstudio.com/download)
+2. [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/)
+3. [Git](https://git-scm.com/downloads)
+4. [Microsoft Fabric Trial](https://www.microsoft.com/microsoft-fabric)
 
-## Power Platform
+## 📚 Essential Microsoft Fabric Resources
 
-- [Power Platform marketing page](https://www.microsoft.com/en-us/power-platform)
-- [Power Platform pricing](https://www.microsoft.com/en-us/power-platform/products/power-apps/pricing)
-- [Power Platform documentation](https://learn.microsoft.com/en-us/power-platform/)
+### Official Documentation
+- [Microsoft Fabric Overview](https://learn.microsoft.com/fabric/get-started/microsoft-fabric-overview)
+- [Getting Started with Fabric](https://learn.microsoft.com/fabric/get-started/)
+- [Data Engineering Guide](https://learn.microsoft.com/fabric/data-engineering/data-engineering-overview)
+- [Real-Time Analytics Overview](https://learn.microsoft.com/fabric/real-time-analytics/overview)
+- [Data Science in Fabric](https://learn.microsoft.com/fabric/data-science/data-science-overview)
+- [Data Factory Overview](https://learn.microsoft.com/fabric/data-factory/data-factory-overview)
 
-## Dev Tools
+### Learning Resources
+- [Microsoft Fabric Learning Path](https://learn.microsoft.com/training/paths/get-started-fabric/)
+- [Microsoft Fabric Documentation](https://learn.microsoft.com/fabric/)
+- [Fabric Community](https://community.fabric.microsoft.com/)
 
-- [Microsoft Fabric/Power BI service portal](https://app.fabric.microsoft.com/home?experience=power-bi)
-- [.NET client library for Microsoft Power BI](https://www.nuget.org/packages/Microsoft.PowerBI.Api/)
-- [OneLake File Explorer for Windows](https://www.microsoft.com/en-us/download/details.aspx?id=105222)
-- [Power BI Desktop](https://www.microsoft.com/en-us/power-platform/products/power-bi/desktop)
-- [Power BI mobile app (iOS, Android)](https://learn.microsoft.com/en-us/power-bi/consumer/mobile/mobile-apps-for-mobile-devices)
-- [DAX calc & measures reference](https://learn.microsoft.com/en-us/dax/dax-function-reference)
-- [PowerFX low-code dev reference](https://learn.microsoft.com/en-us/power-platform/power-fx/formula-reference-overview)
-- [Power Query M data transformation reference](https://learn.microsoft.com/en-us/powerquery-m/)
+### Best Practices
+- [Data Warehouse Best Practices](https://learn.microsoft.com/fabric/data-warehouse/best-practices-warehouse)
+- [Security Documentation](https://learn.microsoft.com/fabric/security/)
+- [Capacity Management](https://learn.microsoft.com/fabric/enterprise/capacity-management)
 
-## Sample Data
+## 🗺️ Course Modules
 
-- [Power BI Developer Samples](https://github.com/Microsoft/PowerBI-Developer-Samples)
-- [Microsoft Fabric samples](https://github.com/microsoft/fabric-samples)
+1. **Fabric Foundations & Data Engineering**
+   - OneLake and Data Engineering
+   - Lakehouse architecture
+   - Data pipelines
 
-## Microsoft Fabric Certification
+2. **Data Science & Analytics**
+   - Notebooks and Spark
+   - Machine Learning
+   - Real-time analytics
 
-- [Microsoft Certified: Fabric Analytics Engineer Associate](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/)
-- [Exam DP-600 Microsoft practice assessment](https://learn.microsoft.com/en-us/credentials/certifications/fabric-analytics-engineer-associate/practice/assessment?assessment-type=practice&assessmentId=90&practice-assessment-type=certification)
-- [Microsoft cert offers](https://learn.microsoft.com/en-us/credentials/certifications/deals)
--
+3. **Data Warehousing**
+   - Warehouse optimization
+   - T-SQL endpoints
+   - Direct Lake mode
+
+4. **Power BI Integration**
+   - DirectQuery
+   - Semantic models
+   - Report development
+
+## 📈 Hands-on Labs
+
+Each module includes practical exercises to reinforce learning:
+- Data pipeline creation
+- Spark notebook development
+- Warehouse optimization
+- Dashboard creation
+
+## 🎓 Certification Path
+
+This course aligns with these Microsoft certifications:
+- [DP-600: Implementing Analytics Solutions Using Microsoft Fabric](https://learn.microsoft.com/credentials/certifications/fabric-analytics-engineer-associate/)
+- [PL-300: Power BI Data Analyst](https://learn.microsoft.com/credentials/certifications/power-bi-data-analyst-associate/)
+
+## 👨‍🏫 About the Instructor
+
+Tim Warner is a Microsoft MVP (Azure & AI) and Microsoft Certified Trainer with 25+ years of experience. Connect with Tim on [LinkedIn](https://www.linkedin.com/in/timothywarner).
+
+## 📝 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+*This training is part of O'Reilly's Live Learning platform. For registration and additional details, visit [O'Reilly's website](https://learning.oreilly.com/).*
