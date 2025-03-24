@@ -1,7 +1,3 @@
-Perfect. I'll pull from the DP-600 cert for relevant skills and demos, and tailor this for data engineers, scientists, devs, and enterprise-focused practitioners using Microsoft's canonical fictional companies. I'll also surface common real-world use cases from Microsoft Fabric documentation and related enterprise patterns to build a high-impact, role-specific, demo-heavy Table of Contents.
-
-Give me a moment to build that full storyline and course outline for you.
-
 # Enterprise Analytics with Microsoft Fabric: End-to-End Hands-On Training (5-Part Course)
 
 ## Course Overview
