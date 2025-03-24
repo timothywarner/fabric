@@ -1,94 +1,96 @@
-# Microsoft Fabric Jumpstart Training
+# Microsoft Fabric Jumpstart: Enterprise Analytics Training
+**Published by Pearson**
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Links Check](https://img.shields.io/github/actions/workflow/status/timothywarner/fabric/README-links-check.yml?label=links)](https://github.com/timothywarner/fabric/actions/workflows/README-links-check.yml)
-[![Microsoft Fabric](https://img.shields.io/badge/Fabric-Documentation-blue)](https://learn.microsoft.com/fabric/)
-[![Website](https://img.shields.io/badge/🌐-TechTrainerTim.com-blue)](https://techtrainertim.com/)
-[![O'Reilly](https://img.shields.io/badge/O'Reilly-Live%20Training-red)](https://learning.oreilly.com/)
+## Course Overview
+Transform raw data into actionable insights within hours using Microsoft Fabric's comprehensive analytics suite. This course follows Contoso Retail & Supply Co.'s journey as they modernize their analytics platform, breaking down data silos and enabling faster insights through Microsoft Fabric's unified analytics ecosystem.
 
-Welcome to the Microsoft Fabric Jumpstart training repository! This hands-on course is designed to get you productive with Microsoft's unified analytics platform quickly and effectively.
+## What You'll Learn
+- Design end-to-end data analytics solutions within the Microsoft Fabric ecosystem
+- Implement a medallion lakehouse architecture (Bronze/Silver/Gold) for data quality
+- Build real-time event streams for IoT and transactional data
+- Perform data science and machine learning on enterprise data
+- Create governed, enterprise-grade Power BI reports with Direct Lake
 
-## 🎯 Course Overview
+## Who This Course Is For
+- Data Engineers and Data Scientists working with enterprise analytics
+- IT professionals modernizing their data platform
+- Business Intelligence developers and analysts
+- Database Administrators transitioning to cloud analytics
+- Professionals preparing for Microsoft Fabric certification (DP-600)
 
-Transform raw data into actionable insights within hours using Microsoft Fabric's comprehensive analytics suite. This course combines architectural principles with hands-on labs to ensure you understand both theory and practical implementation.
+## Prerequisites
+- Basic Azure familiarity: Understanding of core Azure concepts (resource groups, subscriptions, basic networking)
+- Data fundamentals: Knowledge of data types, relational databases, and general data warehousing concepts
+- Optional/suggested: Exposure to one programming language (Python, SQL, or similar) for the Databricks section
+- Prior cloud data experience (any provider) helps in mapping concepts to the Microsoft Fabric context
 
-## 🔧 Prerequisites
+## Course Setup Requirements
+- Active Azure subscription (free trial available)
+- Reliable Internet connection
+- Code editor/IDE (Visual Studio Code recommended)
+- Azure Storage Explorer (recommended)
 
-- Active Azure subscription ([Create free account](https://azure.microsoft.com/free/))
-- Basic Azure knowledge (resource groups, subscriptions, networking)
-- Data fundamentals understanding
-- Optional: Familiarity with Python, SQL, or similar languages
+## Course Schedule (4 hours)
 
-## 🛠️ Setup Requirements
+### Segment 1: Introduction to Microsoft Fabric and Contoso's Analytics Challenge (30 minutes)
+- Solving data challenges with Fabric
+- Core components overview (OneLake, Lakehouse, Data Engineering, Data Factory, Real-Time Analytics, Data Science, Data Warehouse, Power BI)
+- Real-world use cases at Contoso
+- Hands-on: Setting up Fabric workspace and OneLake
 
-1. [Visual Studio Code](https://code.visualstudio.com/download)
-2. [Azure Storage Explorer](https://azure.microsoft.com/features/storage-explorer/)
-3. [Git](https://git-scm.com/downloads)
-4. [Microsoft Fabric Trial](https://www.microsoft.com/microsoft-fabric)
+### Segment 2: Building a Lakehouse – Data Ingestion and Preparation (45 minutes)
+- Implementing medallion architecture (Bronze/Silver/Gold)
+- Data ingestion with Azure Data Factory
+- Data transformation with Spark notebooks
+- Hands-on: Building Contoso's lakehouse with sample data
+- Q&A
 
-## 📚 Essential Microsoft Fabric Resources
+### Segment 3: Real-Time Analytics – Streaming Data for Instant Insights (50 minutes)
+- Event streams and KQL databases
+- IoT monitoring and fraud detection
+- Hands-on: Setting up real-time monitoring for Contoso's delivery fleet
+- Break (5 minutes)
 
-### Official Documentation
-- [Microsoft Fabric Overview](https://learn.microsoft.com/fabric/get-started/microsoft-fabric-overview)
-- [Getting Started with Fabric](https://learn.microsoft.com/fabric/get-started/)
-- [Data Engineering Guide](https://learn.microsoft.com/fabric/data-engineering/data-engineering-overview)
-- [Real-Time Analytics Overview](https://learn.microsoft.com/fabric/real-time-analytics/overview)
-- [Data Science in Fabric](https://learn.microsoft.com/fabric/data-science/data-science-overview)
-- [Data Factory Overview](https://learn.microsoft.com/fabric/data-factory/data-factory-overview)
+### Segment 4: Advanced Analytics and AI – Data Science in Microsoft Fabric (45 minutes)
+- Data science workflow in Fabric
+- MLflow integration and experiment tracking
+- Hands-on: Building a sales forecasting model
+- Q&A
+- Break (5 minutes)
 
-### Learning Resources
-- [Microsoft Fabric Learning Path](https://learn.microsoft.com/training/paths/get-started-fabric/)
-- [Microsoft Fabric Documentation](https://learn.microsoft.com/fabric/)
-- [Fabric Community](https://community.fabric.microsoft.com/)
+### Segment 5: Delivering Insights – Power BI, Deployment, and Governance (40 minutes)
+- Power BI with Direct Lake
+- Deployment pipelines and version control
+- Security and governance with Purview
+- Hands-on: Creating Contoso's executive dashboard
+- Resources and Next Steps (20 minutes)
 
-### Best Practices
-- [Data Warehouse Best Practices](https://learn.microsoft.com/fabric/data-warehouse/best-practices-warehouse)
-- [Security Documentation](https://learn.microsoft.com/fabric/security/)
-- [Capacity Management](https://learn.microsoft.com/fabric/enterprise/capacity-management)
+## Instructor
+Tim Warner is a Microsoft MVP (Azure & AI) and Microsoft Certified Trainer with 25+ years of experience. His O'Reilly Live Training classes on generative AI, GitHub, DevOps, data engineering, cloud computing, and Microsoft certification reach hundreds of thousands of students worldwide. Connect with Tim on [LinkedIn](https://www.linkedin.com/in/timothywarner).
 
-## 🗺️ Course Modules
+## Recommended Preparation
+- Watch: Exam DP-900 Microsoft Azure Data Fundamentals by Chris Sorensen
+- Watch: Exam AZ-900: Microsoft Azure Fundamentals, 3rd Edition, by Jim Cheshire
 
-1. **Fabric Foundations & Data Engineering**
-   - OneLake and Data Engineering
-   - Lakehouse architecture
-   - Data pipelines
+## Recommended Follow-up
+- Read: Exam Ref DP-900 Microsoft Azure Data Fundamentals by Seara and Milano
+- Attend: Exam DP-203: Data Engineering on Microsoft Azure Crash Course by Tim Warner
 
-2. **Data Science & Analytics**
-   - Notebooks and Spark
-   - Machine Learning
-   - Real-time analytics
+## Course Resources
+- GitHub Repository: https://github.com/timothywarner/fabric
+- Microsoft Fabric Documentation: https://learn.microsoft.com/fabric/
 
-3. **Data Warehousing**
-   - Warehouse optimization
-   - T-SQL endpoints
-   - Direct Lake mode
+## Contoso Scenario Overview
+Throughout this course, we follow Contoso Retail & Supply Co.'s journey as they modernize their analytics platform. Contoso faces typical enterprise challenges:
+- Siloed data across systems
+- Slow ETL processes
+- Need for real-time insights
+- Growing demand for AI/ML solutions
 
-4. **Power BI Integration**
-   - DirectQuery
-   - Semantic models
-   - Report development
+By adopting Fabric's unified analytics ecosystem, Contoso's data team will:
+1. Ingest and refine data in a lakehouse
+2. Incorporate streaming IoT and transactional data
+3. Perform data science experiments
+4. Deliver interactive dashboards
 
-## 📈 Hands-on Labs
-
-Each module includes practical exercises to reinforce learning:
-- Data pipeline creation
-- Spark notebook development
-- Warehouse optimization
-- Dashboard creation
-
-## 🎓 Certification Path
-
-This course aligns with these Microsoft certifications:
-- [DP-600: Implementing Analytics Solutions Using Microsoft Fabric](https://learn.microsoft.com/credentials/certifications/fabric-analytics-engineer-associate/)
-- [PL-300: Power BI Data Analyst](https://learn.microsoft.com/credentials/certifications/power-bi-data-analyst-associate/)
-
-## 👨‍🏫 About the Instructor
-
-Tim Warner is a Microsoft MVP (Azure & AI) and Microsoft Certified Trainer with 25+ years of experience. Connect with Tim on [LinkedIn](https://www.linkedin.com/in/timothywarner).
-
-## 📝 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
----
-*This training is part of O'Reilly's Live Learning platform. For registration and additional details, visit [O'Reilly's website](https://learning.oreilly.com/).*
+All within a governed, single environment that eliminates duplication and silos through OneLake's "one-copy" approach.
