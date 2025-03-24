@@ -1,10 +1,5 @@
 # Microsoft Fabric Jumpstart: Enterprise Analytics Training
 
-**Published by Pearson and O'Reilly Media**
-
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![YouTube Channel Subscribers](https://img.shields.io/youtube/channel/subscribers/UCim7PFtynyPuzMHtbNyYOXA?style=social)](https://www.youtube.com/channel/UCim7PFtynyPuzMHtbNyYOXA)
-
 <img src="images/fabric-cover.png" alt="Microsoft Fabric Course Cover" width="800" style="border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.1);"/>
 
 Welcome to the training hub for **Microsoft Fabric Jumpstart: Enterprise Analytics Training**. Whether you're preparing for the DP-600 certification or modernizing your enterprise analytics platform, this guide provides everything you need to master Microsoft Fabric's unified analytics ecosystem.
