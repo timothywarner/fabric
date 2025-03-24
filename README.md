@@ -19,8 +19,6 @@ Welcome to the training hub for **Microsoft Fabric Jumpstart: Enterprise Analyti
 👉 **New to this repo?** Check out the [Getting Started Guide](GETTING-STARTED.md) for navigation help!  
 📋 **Looking for the course plan?** View the [Course Plan](course-plan.md)!
 
-*Last updated: March 18, 2024*
-
 ---
 
 ## 📬 **Contact Information**
