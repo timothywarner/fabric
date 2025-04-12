@@ -2,14 +2,14 @@
 
 ## Course Timing Schedule (4 Hours)
 
-- **11:00 AM** - Segment 1: Introduction to Microsoft Fabric
+- **11:00 AM** - Segment 1: Introduction to Microsoft Fabric (Introduction, Workspaces, RBAC)
 - **12:00 PM** - 10-minute break
-- **12:10 PM** - Segment 2: Building a Lakehouse
+- **12:10 PM** - Segment 2: Batch Processing in Fabric
 - **01:10 PM** - 10-minute break
-- **01:20 PM** - Segment 3: Real-Time Analytics
+- **01:20 PM** - Segment 3: Batch and Streaming Analytics
 - **02:20 PM** - 10-minute break
-- **02:30 PM** - Segment 4: Advanced Analytics & Power BI
-- **03:30 PM** - End of session
+- **02:30 PM** - Segment 4: Fabric Certification
+- **03:00 PM** - End of session
 
 ---
 
@@ -24,7 +24,7 @@
 ### Key Learning Objectives
 - Understand Fabric's position in the Microsoft data ecosystem
 - Identify main components: OneLake, Lakehouse, Real-Time Analytics, etc.
-- Set up a Fabric workspace and understand the basics
+- Set up a Fabric workspace and understand role-based access control (RBAC)
 
 ### Step-by-Step Demo Plan
 
@@ -40,12 +40,13 @@
 - **Click Path:** Inside workspace → Show different experience switcher (Data Engineering, Data Factory, etc.)
 - **Highlight:** Point out how all experiences share the same data in OneLake
 
-#### 3. Activating & Managing Fabric Trial (10 minutes)
-- **Click Path:** Settings → Admin Portal → Capacity settings → Trial activation
-- **Explain:** Trial limitations, capacity concepts
-- **Highlight:** Show how to check remaining trial days
+#### 3. RBAC Configuration (15 minutes)
+- **Click Path:** Workspace settings → Access
+- **Explain:** Different roles (Admin, Member, Contributor, Viewer)
+- **Demo:** Add a new user with specific permissions
+- **Highlight:** Best practices for workspace security in enterprise environments
 
-#### 4. First Data Upload (15 minutes)
+#### 4. First Data Upload (10 minutes)
 - **Click Path:** Create → Lakehouse → Name it "ContosoLakehouse"
 - **File Upload:** 
   - Navigate to Files view
@@ -64,7 +65,7 @@
 
 ---
 
-## Segment 2: Building a Lakehouse (60 minutes)
+## Segment 2: Batch Processing in Fabric (60 minutes)
 
 ### Pre-Session Checklist
 - Lakehouse already created in previous segment
@@ -73,7 +74,7 @@
 
 ### Key Learning Objectives
 - Implement medallion architecture (Bronze/Silver/Gold)
-- Create data pipelines for ingestion
+- Create data pipelines for batch ingestion
 - Transform data using notebooks
 
 ### Step-by-Step Demo Plan
@@ -150,93 +151,21 @@
 
 ---
 
-## Segment 3: Real-Time Analytics (60 minutes)
+## Segment 3: Batch and Streaming Analytics (60 minutes)
 
 ### Pre-Session Checklist
+- Batch processing pipeline ready from Segment 2
 - KQL Database created in advance
 - Sample streaming data source ready
-- Demo event stream configured for quick setup
 
 ### Key Learning Objectives
+- Understand the difference between batch and streaming data
 - Configure event streams
-- Set up KQL databases
-- Query real-time data with KQL
+- Set up KQL databases for real-time analytics
 
 ### Step-by-Step Demo Plan
 
-#### 1. Real-Time Analytics Overview (10 minutes)
-- **Click Path:** Switch to "Real-Time Analytics" experience
-- **Explain:** Event streams, KQL databases, real-time dashboards
-- **Highlight:** Differences between batch and real-time processing
-
-#### 2. KQL Database Creation (15 minutes)
-- **Click Path:** New → KQL Database → Name it "ContosoRealTime"
-- **Click Path:** Inside database → Query
-- **Simple KQL Query:**
-  ```kql
-  .create table SensorData (DeviceId: string, Temperature: real, Humidity: real, Timestamp: datetime)
-  ```
-- **Explain:** How KQL databases store and query time-series data efficiently
-
-#### 3. Event Stream Setup (25 minutes)
-- **Click Path:** New → Eventstream → Name it "DeviceTelemetryStream"
-- **Step-By-Step:**
-  1. Add Source:
-     - Select "Sample data source" (for demo purposes)
-     - Configure to generate IoT-like data
-  2. Add Destination:
-     - Select KQL Database
-     - Choose "ContosoRealTime"
-     - Target table: "SensorData"
-  3. Start the event stream
-  4. Show events flowing in the monitoring view
-
-#### 4. Real-Time Queries and Analysis (10 minutes)
-- **Click Path:** KQL Database → Query
-- **Useful KQL Queries:**
-  ```kql
-  // Last 5 minutes of data
-  SensorData
-  | where Timestamp > ago(5m)
-  | order by Timestamp desc
-  
-  // Average temperature by device
-  SensorData
-  | where Timestamp > ago(10m)
-  | summarize AvgTemp = avg(Temperature) by DeviceId
-  | order by AvgTemp desc
-  
-  // Detecting anomalies
-  SensorData
-  | where Temperature > 90 or Temperature < 30
-  | project DeviceId, Temperature, Timestamp
-  ```
-
-### Can't-Miss Examples
-- Show **built-in visualizations** in KQL query results (click the chart icons)
-- Demonstrate **auto-refresh** on query results (set to 10-second refresh)
-- Show how to create a **basic KQL dashboard**:
-  1. Click "Pin to dashboard" on a visualization
-  2. Name it "Device Monitoring Dashboard"
-  3. Show how it updates in real-time
-
----
-
-## Segment 4: Advanced Analytics & Power BI (60 minutes)
-
-### Pre-Session Checklist
-- Gold layer data prepared
-- Sample notebooks ready for ML demo
-- Pre-built Power BI template file (.pbit) available
-
-### Key Learning Objectives
-- Perform basic data science in Fabric
-- Create Power BI reports with Direct Lake
-- Implement security and governance
-
-### Step-by-Step Demo Plan
-
-#### 1. Creating the Gold Layer (15 minutes)
+#### 1. Completing Batch Processing: Gold Layer (15 minutes)
 - **Click Path:** Lakehouse → New notebook → "GoldLayerPrep"
 - **Code to Type:**
   ```python
@@ -261,88 +190,94 @@
   ```
 - **Highlight:** Explain how this aggregated view is now ready for reporting
 
-#### 2. Simple Sales Forecast (10 minutes)
-- **Click Path:** Continue in the same notebook
-- **Code to Type:**
-  ```python
-  # Simple forecast with linear regression
-  from pyspark.ml.feature import VectorAssembler
-  from pyspark.ml.regression import LinearRegression
-  
-  # Prepare data for ML
-  sales_df = spark.sql("""
-    SELECT 
-      Month, 
-      Year,
-      SUM(TotalRevenue) as MonthlyRevenue
-    FROM 
-      sales_gold
-    GROUP BY 
-      Month, Year
-    ORDER BY
-      Year, Month
-  """)
-  
-  # Create a feature vector
-  assembler = VectorAssembler(inputCols=["Month", "Year"], outputCol="features")
-  df_vec = assembler.transform(sales_df)
-  
-  # Train a linear regression model
-  lr = LinearRegression(featuresCol="features", labelCol="MonthlyRevenue")
-  model = lr.fit(df_vec)
-  
-  # Make predictions
-  predictions = model.transform(df_vec)
-  display(predictions.select("Month", "Year", "MonthlyRevenue", "prediction"))
-  
-  # Save forecast to a table
-  predictions.write.format("delta").mode("overwrite").saveAsTable("sales_forecast")
+#### 2. Real-Time Analytics Overview (10 minutes)
+- **Click Path:** Switch to "Real-Time Analytics" experience
+- **Explain:** Event streams, KQL databases, real-time dashboards
+- **Highlight:** Differences between batch and real-time processing
+
+#### 3. KQL Database Creation (15 minutes)
+- **Click Path:** New → KQL Database → Name it "ContosoRealTime"
+- **Click Path:** Inside database → Query
+- **Simple KQL Query:**
+  ```kql
+  .create table SensorData (DeviceId: string, Temperature: real, Humidity: real, Timestamp: datetime)
   ```
+- **Explain:** How KQL databases store and query time-series data efficiently
 
-#### 3. Power BI Direct Lake Setup (15 minutes)
-- **Click Path:** New → Semantic Model
+#### 4. Event Stream Setup (20 minutes)
+- **Click Path:** New → Eventstream → Name it "DeviceTelemetryStream"
 - **Step-By-Step:**
-  1. Select "Import from a SQL endpoint"
-  2. Connect to the Lakehouse SQL endpoint
-  3. Select "sales_gold" and "sales_forecast" tables
-  4. Click "Transform data" to enter Power Query
-  5. Basic transformations:
-     - Rename columns to friendly names
-     - Create a Date table using "Create calendar table"
-     - Add relationships between Date and sales tables
-  6. Apply and close
-
-#### 4. Creating the Power BI Report (20 minutes)
-- **Click Path:** New → Report (connected to the semantic model)
-- **Step-By-Step Report Creation:**
-  1. Add a **Card visual**:
-     - Drag "TotalRevenue" measure
-     - Format to show as currency
-  
-  2. Add a **Column chart**:
-     - X-axis: Month (from Date table)
-     - Y-axis: TotalRevenue
-     - Legend: Year
-  
-  3. Add a **Table visual**:
-     - Columns: Product, TotalRevenue
-     - Sort by: TotalRevenue (descending)
-  
-  4. Add a **Line chart** for forecast:
-     - X-axis: Month + Year (combined)
-     - Y-axis: MonthlyRevenue and prediction
-  
-  5. Add a **Slicer** for Region:
-     - Field: Region
-     - Style: Dropdown
-  
-  6. **Format the report**:
-     - Add a title "Contoso Sales Dashboard"
-     - Set a theme (click Format → Theme)
-     - Arrange visuals in a logical layout
+  1. Add Source:
+     - Select "Sample data source" (for demo purposes)
+     - Configure to generate IoT-like data
+  2. Add Destination:
+     - Select KQL Database
+     - Choose "ContosoRealTime"
+     - Target table: "SensorData"
+  3. Start the event stream
+  4. Show events flowing in the monitoring view
 
 ### Can't-Miss Examples
-- **Direct Lake mode benefits**: Show how changes in the lakehouse immediately reflect in the report
+- Show **built-in visualizations** in KQL query results (click the chart icons)
+- Demonstrate **auto-refresh** on query results (set to 10-second refresh)
+- Compare performance of batch vs. streaming queries for the same data volume
+
+---
+
+## Segment 4: Fabric Certification (30 minutes)
+
+### Pre-Session Checklist
+- Demo notebooks for monitoring examples
+- DP-600 exam objectives overview slide ready
+- Monitoring dashboards prepared
+- Capacity metrics reports ready
+
+### Key Learning Objectives
+- Implement comprehensive monitoring for Fabric environments
+- Understand capacity management and optimization
+- Learn the DP-600 certification path
+- Explore advanced governance features
+
+### Step-by-Step Demo Plan
+
+#### 1. Fabric Monitoring Implementation (15 minutes)
+- **Click Path:** Admin Portal → Monitoring
+- **Demos:**
+  - Fabric capacity metrics dashboard
+  - Workspace activity monitoring
+  - Setting up alerts and notifications
+  - Performance tracking across experiences
+- **Highlight:** Critical metrics to watch in production environments
+
+#### 2. Capacity Management and Optimization (15 minutes)
+- **Click Path:** Admin Portal → Capacities
+- **Demos:**
+  - Resource utilization monitoring
+  - Identifying performance bottlenecks
+  - Scaling strategies for different workloads
+  - Cost optimization techniques
+- **Highlight:** Best practices for enterprise-scale deployments
+
+#### 3. Security and Governance Integration (10 minutes)
+- **Click Path:** Admin Portal → Security
+- **Demos:**
+  - Row-level security implementation
+  - Object-level security
+  - Information protection integration
+  - Data lineage tracking
+
+#### 4. DP-600 Certification Overview (15 minutes)
+- **Explain:** Exam domains and scoring
+- **Highlight:** Key focus areas and preparation strategies
+- **Resources:** Recommended study materials and practice tests
+
+#### 5. Q&A and Course Wrap-up (5 minutes)
+- Address final questions
+- Provide resources for continued learning
+- Course feedback collection
+
+### Can't-Miss Examples
+- **DirectLake mode benefits**: Show how changes in the lakehouse immediately reflect in the report
 - **Row-level security**: 
   1. In the semantic model, click "Manage roles"
   2. Create a role "RegionalManager"
@@ -368,3 +303,32 @@
 
 ### Certification Path
 - [DP-600: Implementing Analytics Solutions Using Microsoft Fabric](https://learn.microsoft.com/certifications/exams/dp-600) 
+
+### Mermaid Diagrams
+These diagrams will help visualize the data flow through different segments of the course:
+
+```mermaid
+graph TD
+    A[Raw Data Sources] --> B[Bronze Layer]
+    B --> C[Silver Layer - Cleaned]
+    C --> D[Gold Layer - Aggregated]
+    D --> E[Power BI Reporting]
+    
+    style A fill:#f9d5e5,stroke:#333,stroke-width:2px
+    style B fill:#eeac99,stroke:#333,stroke-width:2px
+    style C fill:#e06377,stroke:#333,stroke-width:2px
+    style D fill:#c83349,stroke:#333,stroke-width:2px
+    style E fill:#5b9aa0,stroke:#333,stroke-width:2px
+```
+
+```mermaid
+graph LR
+    A[Event Source] -->|Real-time| B[Event Stream]
+    B --> C[KQL Database]
+    C --> D[Real-time Dashboard]
+    
+    style A fill:#bbdef0,stroke:#333,stroke-width:2px
+    style B fill:#00a8e8,stroke:#333,stroke-width:2px
+    style C fill:#007ea7,stroke:#333,stroke-width:2px
+    style D fill:#003459,stroke:#333,stroke-width:2px
+``` 
