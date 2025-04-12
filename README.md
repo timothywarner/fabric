@@ -12,7 +12,7 @@ Welcome to the training hub for **Microsoft Fabric Jumpstart: Enterprise Analyti
 </div>
 
 👉 **New to this repo?** Check out the [Getting Started Guide](GETTING-STARTED.md) for navigation help!  
-📋 **Looking for the course plan?** View the [Course Plan](course-plan.md)!
+📋 **Looking for the course plan?** View the [Course Plan](instructor/final-course-plan.md)!
 
 ---
 
@@ -29,26 +29,39 @@ Welcome to the training hub for **Microsoft Fabric Jumpstart: Enterprise Analyti
 ---
 
 ## 📆 **Course Plan Overview**
-This jumpstart course is structured into 5 segments, each focused on a key aspect of Microsoft Fabric:
+This jumpstart course is structured into 4 segments over 4 hours, with a practical hands-on approach to Microsoft Fabric:
 
 <table>
 <tr>
-<td width="20%"><strong>Segment 1</strong></td>
-<td width="20%"><strong>Segment 2</strong></td>
-<td width="20%"><strong>Segment 3</strong></td>
-<td width="20%"><strong>Segment 4</strong></td>
-<td width="20%"><strong>Segment 5</strong></td>
+<td width="25%"><strong>Segment 1</strong></td>
+<td width="25%"><strong>Segment 2</strong></td>
+<td width="25%"><strong>Segment 3</strong></td>
+<td width="25%"><strong>Segment 4</strong></td>
 </tr>
 <tr>
-<td>Introduction (30m)</td>
-<td>Lakehouse (45m)</td>
-<td>Real-Time (50m)</td>
-<td>Data Science (45m)</td>
-<td>Insights (40m)</td>
+<td>Introduction to Fabric (60m)</td>
+<td>Building a Lakehouse (60m)</td>
+<td>Real-Time Analytics (60m)</td>
+<td>Advanced Analytics & Power BI (60m)</td>
 </tr>
 </table>
 
-💡 **See the full [detailed course plan](course-plan.md) for complete information!**
+<div align="center">
+
+| Time | Activity |
+|------|----------|
+| 11:00 AM | Segment 1: Introduction to Microsoft Fabric |
+| 12:00 PM | 10-minute break |
+| 12:10 PM | Segment 2: Building a Lakehouse |
+| 01:10 PM | 10-minute break |
+| 01:20 PM | Segment 3: Real-Time Analytics |
+| 02:20 PM | 10-minute break |
+| 02:30 PM | Segment 4: Advanced Analytics & Power BI |
+| 03:30 PM | End of session |
+
+</div>
+
+💡 **See the full [detailed course plan](instructor/final-course-plan.md) for complete information!**
 
 ---
 
@@ -92,16 +105,18 @@ This course is designed for data professionals who want to modernize their analy
 - Setting up workspaces and OneLake
 - Navigating Fabric's unified interface
 - Managing Fabric capacities
+- Activating and managing Fabric trials
 
 </details>
 
 <details>
 <summary><strong>2. Building a Lakehouse</strong></summary>
 
-- Implementing medallion architecture
-- Creating data pipelines
-- Transforming data with Spark
-- Managing data quality
+- Implementing medallion architecture (Bronze/Silver/Gold)
+- Creating data pipelines for batch ingestion
+- Transforming data with Spark notebooks
+- Managing data quality through SQL analytics endpoint
+- Working with Delta Lake format
 
 </details>
 
@@ -112,26 +127,19 @@ This course is designed for data professionals who want to modernize their analy
 - Working with KQL databases
 - Implementing real-time monitoring
 - Processing streaming data
+- Creating real-time visualizations
 
 </details>
 
 <details>
-<summary><strong>4. Advanced Analytics and AI</strong></summary>
+<summary><strong>4. Advanced Analytics & Power BI</strong></summary>
 
-- Performing data science
-- Tracking ML experiments
-- Building predictive models
-- Managing ML workflows
-
-</details>
-
-<details>
-<summary><strong>5. Delivering Insights</strong></summary>
-
-- Creating Power BI reports
+- Creating Gold layer for analysis
+- Performing basic data science
+- Building predictive models with Spark ML
+- Creating Power BI reports with Direct Lake
+- Implementing security and governance
 - Managing deployment pipelines
-- Implementing security controls
-- Governing data access
 
 </details>
 
@@ -266,6 +274,12 @@ Expand your Microsoft data credentials:
 [![Real-Time Analytics](https://img.shields.io/badge/Real--Time%20Analytics-Watch%20Video-red?logo=youtube)](https://www.youtube.com/watch?v=example3)
 
 </div>
+
+---
+
+## 📄 **License**
+
+This repository is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
 ---
 
