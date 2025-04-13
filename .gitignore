@@ -160,3 +160,17 @@ cython_debug/
 #.idea/
 ~$warner-ms-fabric-slides.pptx
 notepad
+
+# Large data files
+*.csv
+*.parquet
+*.json
+
+# Data directories
+data/
+fabric-samples/demo-resources/
+
+# Common patterns
+.DS_Store
+node_modules/
+*.pyc
