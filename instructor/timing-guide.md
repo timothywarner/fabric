@@ -1,110 +1,124 @@
-# Microsoft Fabric Jumpstart: Timing Guide
+# Microsoft Fabric Quick Start: Timing Guide
 
-## Overall Schedule (4 hours)
-- Total Time: 240 minutes
-- Buffer Time: 20 minutes (distributed throughout)
-- Actual Teaching Time: 220 minutes
+## Overall Schedule (4 Hours)
 
-## Segment 1: Introduction (30 minutes)
-- **Start Time**: 0:00
-- **Buffer**: +2 minutes
-- **Target End**: 0:32
+### Morning Session
+- **11:00 AM** - Segment 1: Introduction to Microsoft Fabric
+  - Terminology and Navigation (20 minutes)
+  - Workspace Setup (20 minutes)
+  - Component Overview (20 minutes)
 
-### Checkpoints
-- 0:05 - Introduction complete
-- 0:15 - Core components overview complete
-- 0:25 - Hands-on setup complete
-- 0:30 - Q&A/Review
+- **12:00 PM** - 10-minute break
 
-## Segment 2: Lakehouse (45 minutes)
-- **Start Time**: 0:32
-- **Buffer**: +3 minutes
-- **Target End**: 1:20
+- **12:10 PM** - Segment 2: Batch Processing
+  - Lakehouse Setup (20 minutes)
+  - Data Warehouse Creation (20 minutes)
+  - Power BI Reporting (20 minutes)
 
-### Checkpoints
-- 0:42 - Medallion architecture complete
-- 0:57 - Data ingestion complete
-- 1:12 - Data transformation complete
-- 1:15 - Q&A/Review
+### Afternoon Session
+- **01:10 PM** - 10-minute break
 
-## Segment 3: Real-Time Analytics (50 minutes)
-- **Start Time**: 1:20
-- **Buffer**: +5 minutes
-- **Target End**: 2:15
+- **01:20 PM** - Segment 3: Stream Processing
+  - Raspberry Pi Simulator Setup (20 minutes)
+  - Event Stream Configuration (20 minutes)
+  - Activator Demo (20 minutes)
 
-### Checkpoints
-- 1:35 - Event streams complete
-- 1:50 - KQL databases complete
-- 2:05 - IoT monitoring complete
-- 2:10 - Break
+- **02:20 PM** - 10-minute break
 
-## Segment 4: Data Science (45 minutes)
-- **Start Time**: 2:15
-- **Buffer**: +5 minutes
-- **Target End**: 3:05
+- **02:30 PM** - Segment 4: Advanced Topics
+  - Copilot for DAX (5 minutes)
+  - Copilot for SQL (5 minutes)
+  - Copilot for Python (5 minutes)
+  - Purview Integration (5 minutes)
+  - Fabric Certification (5 minutes)
+  - Q&A and Wrap-up (5 minutes)
 
-### Checkpoints
-- 2:30 - Data science workflow complete
-- 2:45 - MLflow integration complete
-- 3:00 - ML project complete
-- 3:05 - Q&A/Review
+- **03:00 PM** - End of session
 
-## Segment 5: Delivery (40 minutes)
-- **Start Time**: 3:05
-- **Buffer**: +5 minutes
-- **Target End**: 3:50
+## Detailed Timing Breakdown
 
-### Checkpoints
-- 3:20 - Power BI integration complete
-- 3:30 - Deployment and version control complete
-- 3:40 - Security and governance complete
-- 3:45 - Resources and next steps
-- 3:50 - Final Q&A
+### Segment 1: Introduction (60 minutes)
+1. **Terminology and Navigation** (20 minutes)
+   - Fabric concepts (5 minutes)
+   - Interface walkthrough (10 minutes)
+   - Navigation patterns (5 minutes)
 
-## Time Management Tips
+2. **Workspace Setup** (20 minutes)
+   - Creating workspace (5 minutes)
+   - Configuring settings (10 minutes)
+   - Access control (5 minutes)
 
-### If Running Behind
-1. **Segment 1**: Reduce Q&A time
-2. **Segment 2**: Focus on key pipeline concepts
-3. **Segment 3**: Prioritize event streams over KQL details
-4. **Segment 4**: Focus on MLflow basics
-5. **Segment 5**: Emphasize Power BI over governance
+3. **Component Overview** (20 minutes)
+   - OneLake introduction (5 minutes)
+   - Experience switcher demo (10 minutes)
+   - Integration points (5 minutes)
 
-### If Running Ahead
-1. **Segment 1**: Add more real-world examples
-2. **Segment 2**: Show advanced pipeline patterns
-3. **Segment 3**: Demonstrate more KQL queries
-4. **Segment 4**: Add model evaluation metrics
-5. **Segment 5**: Show more governance features
+### Segment 2: Batch Processing (60 minutes)
+1. **Lakehouse Setup** (20 minutes)
+   - Creating lakehouse (5 minutes)
+   - Data ingestion (10 minutes)
+   - Schema management (5 minutes)
 
-## Common Time Sinks
-- Student environment setup issues
-- Network connectivity problems
-- Complex Q&A discussions
-- Demo troubleshooting
+2. **Data Warehouse** (20 minutes)
+   - Warehouse creation (5 minutes)
+   - Table design (10 minutes)
+   - Query optimization (5 minutes)
 
-## Buffer Usage Guidelines
-- Use buffers for unexpected issues
-- Don't use buffers for planned content
-- Keep 2-3 minutes buffer for final Q&A
-- Use remaining buffer for student questions
+3. **Power BI Reporting** (20 minutes)
+   - Direct Lake mode (5 minutes)
+   - Report creation (10 minutes)
+   - Dashboard design (5 minutes)
 
-## Emergency Time Recovery
-If significantly behind schedule:
-1. Skip non-critical demos
-2. Move detailed explanations to Q&A
-3. Use pre-built demo recordings
-4. Focus on hands-on labs over theory
+### Segment 3: Stream Processing (60 minutes)
+1. **Raspberry Pi Simulator** (20 minutes)
+   - Simulator setup (5 minutes)
+   - Data generation (10 minutes)
+   - Connection testing (5 minutes)
 
-## Student Engagement Checkpoints
-- 0:30 - First hands-on success
-- 1:20 - Lakehouse completion
-- 2:15 - Real-time demo success
-- 3:05 - ML model training
-- 3:50 - Final dashboard
+2. **Event Streams** (20 minutes)
+   - Stream creation (5 minutes)
+   - Data routing (10 minutes)
+   - Monitoring setup (5 minutes)
 
-## Notes
-- Keep this guide visible during teaching
-- Mark actual times vs. targets
-- Note any significant deviations
-- Update for future deliveries 
+3. **Activator Demo** (20 minutes)
+   - Activator setup (5 minutes)
+   - Real-time analytics (10 minutes)
+   - Alert configuration (5 minutes)
+
+### Segment 4: Advanced Topics (30 minutes)
+1. **Copilot for DAX** (5 minutes)
+   - DAX query generation
+   - Query optimization
+   - Best practices
+
+2. **Copilot for SQL** (5 minutes)
+   - SQL query assistance
+   - Query refinement
+   - Performance tips
+
+3. **Copilot for Python** (5 minutes)
+   - Code generation
+   - Code enhancement
+   - Debugging assistance
+
+4. **Purview Integration** (5 minutes)
+   - Connecting Fabric to Purview
+   - Data lineage and classification
+   - Sensitivity labels
+
+5. **Fabric Certification** (5 minutes)
+   - Available certification paths
+   - Study resources
+   - Exam preparation tips
+
+6. **Q&A and Wrap-up** (5 minutes)
+   - Address final questions
+   - Provide resources
+   - Course feedback
+
+## Notes for Instructors
+- Keep demos focused and concise
+- Allow time for questions within each segment
+- Have backup plans ready for technical issues
+- Monitor time closely and adjust if needed
+- Prepare transition statements between segments 

@@ -1,0 +1,18 @@
+This is a placeholder for a Power BI template file (.pbit).
+
+To create an actual Power BI template:
+
+1. Follow the steps in the tutorial to create your Power BI report
+2. Save your report as a .pbix file
+3. In Power BI Desktop, go to File > Export > Save as Template
+4. Save the template as "Retail Analytics Template.pbit"
+
+The template will include:
+- All your data model relationships
+- All your DAX measures
+- All your report pages and visuals
+- All your formatting and layout
+
+Users can then open this template and connect to their own Fabric workspace to create their own report based on your design.
+
+Note: The actual .pbit file is a binary file and cannot be directly edited as text. This is just a placeholder with instructions. 

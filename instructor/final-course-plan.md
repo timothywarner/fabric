@@ -2,18 +2,18 @@
 
 ## Course Timing Schedule (4 Hours)
 
-- **11:00 AM** - Segment 1: Introduction to Microsoft Fabric (Introduction, Workspaces, RBAC)
+- **11:00 AM** - Segment 1: Introduction to Microsoft Fabric (Terminology, Workspaces, Navigation)
 - **12:00 PM** - 10-minute break
-- **12:10 PM** - Segment 2: Batch Processing in Fabric
+- **12:10 PM** - Segment 2: Batch Processing (Lakehouse, Warehouse, Reporting)
 - **01:10 PM** - 10-minute break
-- **01:20 PM** - Segment 3: Batch and Streaming Analytics
+- **01:20 PM** - Segment 3: Stream Processing (Raspberry Pi Sim Demo, Activator)
 - **02:20 PM** - 10-minute break
-- **02:30 PM** - Segment 4: Fabric Certification
+- **02:30 PM** - Segment 4: Advanced Topics (Copilot for DAX, SQL, Python)
 - **03:00 PM** - End of session
 
 ---
 
-## Segment 1: Introduction to Microsoft Fabric (60 minutes)
+## Segment 1: Introduction to Microsoft Fabric
 
 ### Pre-Session Checklist
 - Microsoft Fabric trial activated
@@ -22,31 +22,32 @@
 - Browser tabs open to Microsoft Learn resources
 
 ### Key Learning Objectives
-- Understand Fabric's position in the Microsoft data ecosystem
-- Identify main components: OneLake, Lakehouse, Real-Time Analytics, etc.
-- Set up a Fabric workspace and understand role-based access control (RBAC)
+- Understand Fabric's terminology and key concepts
+- Navigate the Fabric interface confidently
+- Set up and configure workspaces
+- Identify main components and their purposes
 
 ### Step-by-Step Demo Plan
 
-#### 1. Microsoft Fabric Overview (15 minutes)
+#### 1. Microsoft Fabric Overview
 - Show the Fabric homepage at [fabric.microsoft.com](https://fabric.microsoft.com)
 - **Click Path:** Sign in → Show the Fabric homepage → Navigate to Workspaces
 - **Highlight:** Explain how Fabric unifies what were previously separate products
 - **Visual Aid:** Show slide with Fabric architecture diagram
 
-#### 2. Workspace Creation & Tour (15 minutes)
+#### 2. Workspace Creation & Tour
 - **Click Path:** Home → Create a Workspace → Name it "Contoso Analytics" → Create
 - **Explain:** Fabric-enabled workspaces vs. regular Power BI workspaces
 - **Click Path:** Inside workspace → Show different experience switcher (Data Engineering, Data Factory, etc.)
 - **Highlight:** Point out how all experiences share the same data in OneLake
 
-#### 3. RBAC Configuration (15 minutes)
+#### 3. RBAC Configuration
 - **Click Path:** Workspace settings → Access
 - **Explain:** Different roles (Admin, Member, Contributor, Viewer)
 - **Demo:** Add a new user with specific permissions
 - **Highlight:** Best practices for workspace security in enterprise environments
 
-#### 4. First Data Upload (10 minutes)
+#### 4. First Data Upload
 - **Click Path:** Create → Lakehouse → Name it "ContosoLakehouse"
 - **File Upload:** 
   - Navigate to Files view
@@ -54,7 +55,7 @@
   - Show the automatic schema detection
 - **Highlight:** Point out that this data is now available across all Fabric experiences
 
-#### 5. Q&A and Preview of Next Segment (5 minutes)
+#### 5. Q&A and Preview of Next Segment
 - Address any immediate questions
 - Preview what we'll do with this data in the next segment
 
@@ -63,28 +64,35 @@
 - Demonstrate the **SQL endpoint** by clicking on "SQL analytics endpoint" in the lakehouse
 - Show **workspace sharing** by adding a member with different permissions
 
+### Quick Reference: Common Tasks
+- **Create Workspace:** Home → Create Workspace → Name → Create
+- **Add Member:** Workspace Settings → Access → Add Member
+- **Upload Data:** Lakehouse → Files → Upload
+- **View SQL Endpoint:** Lakehouse → SQL Analytics Endpoint
+
 ---
 
-## Segment 2: Batch Processing in Fabric (60 minutes)
+## Segment 2: Batch Processing in Fabric
 
 ### Pre-Session Checklist
-- Lakehouse already created in previous segment
-- Pipeline samples ready to import
-- Demo data sources prepared
+- Lakehouse created from Segment 1
+- Sample data files prepared
+- Power BI Desktop installed
 
 ### Key Learning Objectives
-- Implement medallion architecture (Bronze/Silver/Gold)
-- Create data pipelines for batch ingestion
-- Transform data using notebooks
+- Implement medallion architecture in Lakehouse
+- Create and manage Data Warehouses
+- Build interactive reports with Power BI
+- Understand Direct Lake mode benefits
 
 ### Step-by-Step Demo Plan
 
-#### 1. Medallion Architecture Overview (10 minutes)
+#### 1. Medallion Architecture Overview
 - **Explain:** Bronze (raw), Silver (clean), Gold (business-ready) concept
 - **Click Path:** Lakehouse → Files → Create folders called "Bronze", "Silver", "Gold"
 - **Highlight:** Show slide with medallion data flow
 
-#### 2. Data Pipeline Creation (20 minutes)
+#### 2. Data Pipeline Creation
 - **Click Path:** New → Pipeline → Name it "Contoso Sales Ingest"
 - **Step-by-Step:**
   1. Add Copy Data activity
@@ -98,7 +106,7 @@
   4. Click "Validate" then "Run"
   5. Show successful pipeline execution
 
-#### 3. Data Transformation with Notebook (25 minutes)
+#### 3. Data Transformation with Notebook
 - **Click Path:** New → Notebook → Name it "CleanSalesData"
 - **Code Blocks to Type:**
 
@@ -126,7 +134,7 @@
 
 - **Highlight:** Run each cell and explain the transformations
 
-#### 4. Query the Transformed Data (5 minutes)
+#### 4. Query the Transformed Data
 - **Click Path:** Lakehouse → SQL endpoint
 - Run a sample query:
   ```sql
@@ -149,23 +157,30 @@
   ```
 - Demonstrate **notebook visualization** tools by adding a simple bar chart visualization
 
+### Quick Reference: Common Tasks
+- **Create Pipeline:** New → Pipeline → Name
+- **Add Copy Activity:** Pipeline → Activities → Copy Data
+- **Create Notebook:** New → Notebook → Name
+- **Run SQL Query:** Lakehouse → SQL Analytics Endpoint → New Query
+
 ---
 
-## Segment 3: Batch and Streaming Analytics (60 minutes)
+## Segment 3: Stream Processing
 
 ### Pre-Session Checklist
-- Batch processing pipeline ready from Segment 2
-- KQL Database created in advance
-- Sample streaming data source ready
+- Raspberry Pi simulator ready
+- Event stream templates prepared
+- Sample IoT data generator configured
 
 ### Key Learning Objectives
-- Understand the difference between batch and streaming data
-- Configure event streams
-- Set up KQL databases for real-time analytics
+- Set up real-time data streaming
+- Configure event streams and KQL databases
+- Use Activator for real-time insights
+- Monitor and analyze streaming data
 
 ### Step-by-Step Demo Plan
 
-#### 1. Completing Batch Processing: Gold Layer (15 minutes)
+#### 1. Completing Batch Processing: Gold Layer
 - **Click Path:** Lakehouse → New notebook → "GoldLayerPrep"
 - **Code to Type:**
   ```python
@@ -190,12 +205,12 @@
   ```
 - **Highlight:** Explain how this aggregated view is now ready for reporting
 
-#### 2. Real-Time Analytics Overview (10 minutes)
+#### 2. Real-Time Analytics Overview
 - **Click Path:** Switch to "Real-Time Analytics" experience
 - **Explain:** Event streams, KQL databases, real-time dashboards
 - **Highlight:** Differences between batch and real-time processing
 
-#### 3. KQL Database Creation (15 minutes)
+#### 3. KQL Database Creation
 - **Click Path:** New → KQL Database → Name it "ContosoRealTime"
 - **Click Path:** Inside database → Query
 - **Simple KQL Query:**
@@ -204,7 +219,7 @@
   ```
 - **Explain:** How KQL databases store and query time-series data efficiently
 
-#### 4. Event Stream Setup (20 minutes)
+#### 4. Event Stream Setup
 - **Click Path:** New → Eventstream → Name it "DeviceTelemetryStream"
 - **Step-By-Step:**
   1. Add Source:
@@ -222,73 +237,90 @@
 - Demonstrate **auto-refresh** on query results (set to 10-second refresh)
 - Compare performance of batch vs. streaming queries for the same data volume
 
+### Quick Reference: Common Tasks
+- **Create KQL Database:** New → KQL Database → Name
+- **Create Event Stream:** New → Eventstream → Name
+- **Add Source:** Eventstream → Add Source → Configure
+- **Add Destination:** Eventstream → Add Destination → Configure
+
 ---
 
-## Segment 4: Fabric Certification (30 minutes)
+## Segment 4: Advanced Topics
 
 ### Pre-Session Checklist
-- Demo notebooks for monitoring examples
-- DP-600 exam objectives overview slide ready
-- Monitoring dashboards prepared
-- Capacity metrics reports ready
+- Copilot enabled in Fabric
+- Sample queries prepared
+- Code snippets ready for enhancement
+- Purview integration configured
+- Certification resources ready
 
 ### Key Learning Objectives
-- Implement comprehensive monitoring for Fabric environments
-- Understand capacity management and optimization
-- Learn the DP-600 certification path
-- Explore advanced governance features
+- Leverage Copilot for DAX query generation
+- Use Copilot to optimize SQL queries
+- Enhance Python code with AI assistance
+- Apply best practices for AI-assisted development
+- Understand Fabric certification paths
+- Implement Purview for data governance
 
 ### Step-by-Step Demo Plan
 
-#### 1. Fabric Monitoring Implementation (15 minutes)
-- **Click Path:** Admin Portal → Monitoring
+#### 1. Copilot for DAX
+- **Click Path:** Power BI → Report → Copilot
 - **Demos:**
-  - Fabric capacity metrics dashboard
-  - Workspace activity monitoring
-  - Setting up alerts and notifications
-  - Performance tracking across experiences
-- **Highlight:** Critical metrics to watch in production environments
+  - Generate DAX measures from natural language
+  - Optimize existing DAX calculations
+  - Create complex time intelligence functions
+- **Highlight:** How Copilot can accelerate DAX development
 
-#### 2. Capacity Management and Optimization (15 minutes)
-- **Click Path:** Admin Portal → Capacities
+#### 2. Copilot for SQL
+- **Click Path:** Data Warehouse → Query Editor → Copilot
 - **Demos:**
-  - Resource utilization monitoring
-  - Identifying performance bottlenecks
-  - Scaling strategies for different workloads
-  - Cost optimization techniques
-- **Highlight:** Best practices for enterprise-scale deployments
+  - Generate SQL queries from natural language
+  - Refactor complex queries for performance
+  - Add error handling to existing queries
+- **Highlight:** Best practices for AI-assisted SQL development
 
-#### 3. Security and Governance Integration (10 minutes)
-- **Click Path:** Admin Portal → Security
+#### 3. Copilot for Python
+- **Click Path:** Notebook → Copilot
 - **Demos:**
-  - Row-level security implementation
-  - Object-level security
-  - Information protection integration
-  - Data lineage tracking
+  - Generate data transformation code
+  - Add documentation to existing code
+  - Debug and optimize Python scripts
+- **Highlight:** How to effectively prompt Copilot for code generation
 
-#### 4. DP-600 Certification Overview (15 minutes)
-- **Explain:** Exam domains and scoring
-- **Highlight:** Key focus areas and preparation strategies
-- **Resources:** Recommended study materials and practice tests
+#### 4. Purview Integration
+- **Click Path:** Admin Portal → Purview
+- **Demos:**
+  - Connect Fabric to Purview
+  - Scan Fabric assets for classification
+  - View data lineage across Fabric and other sources
+  - Apply sensitivity labels from Purview
+- **Highlight:** Enterprise data governance with Purview
 
-#### 5. Q&A and Course Wrap-up (5 minutes)
+#### 5. Fabric Certification Paths
+- **Explain:** Available certification options
+  - DP-600: Implementing Analytics Solutions Using Microsoft Fabric
+  - Future certifications in development
+- **Resources:** Study guides, practice tests, and learning paths
+- **Tips:** Exam preparation strategies and focus areas
+
+#### 6. Q&A and Course Wrap-up
 - Address final questions
 - Provide resources for continued learning
 - Course feedback collection
 
 ### Can't-Miss Examples
-- **DirectLake mode benefits**: Show how changes in the lakehouse immediately reflect in the report
-- **Row-level security**: 
-  1. In the semantic model, click "Manage roles"
-  2. Create a role "RegionalManager"
-  3. Add filter: `'sales_gold'[Region] = "USERNAMEEMAIL()"`
-  4. Test the role to show filtered data
+- **Copilot for DAX**: Generate a complex time intelligence measure
+- **Copilot for SQL**: Optimize a query with window functions
+- **Copilot for Python**: Generate a data quality check function
+- **Purview Integration**: Show data lineage from source to report
+- **Certification**: Walk through a sample exam question
 
-- **Deployment pipelines**:
-  1. Go to Deployment Pipelines
-  2. Create new pipeline "Contoso Analytics"
-  3. Add workspace to development stage
-  4. Show how content can be promoted to Test and Production
+### Quick Reference: Common Tasks
+- **Use Copilot**: Click the Copilot icon in any editor
+- **Connect to Purview**: Admin Portal → Purview → Connect
+- **View Lineage**: Purview → Data Catalog → Lineage
+- **Certification Resources**: [Microsoft Learn](https://learn.microsoft.com/certifications/)
 
 ## Additional Resources for Learners
 
