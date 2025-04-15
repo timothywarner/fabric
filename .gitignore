@@ -135,3 +135,4 @@ fabric-samples/demo-resources/
 *.json
 notepad
 ~$warner-ms-fabric-slides.pptx
+tim-vscode-extension-audit.md
